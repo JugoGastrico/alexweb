@@ -1,0 +1,130 @@
+.me__titulo{
+    padding-bottom: 10px;
+    font-family: 'Proza Libre', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+    text-align: center;
+    margin: 25px auto 20px 0;
+    border-bottom: 2px solid rgba(255, 166, 0, 0.363);
+}
+.me_items{
+    display: flex;
+    flex-direction: column;
+}
+.progr,
+.student,
+.free,
+.seo,
+.objective{
+    padding: 20px;
+}
+
+.animationTitle {
+    transition: opacity 1s, transform 
+    500ms;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Proza Libre', sans-serif;
+    color: orange;
+}
+.animationTitle[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-600%) scale(0.4);
+}
+
+.animationTitle[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
+.animationTitle:focus{
+
+}
+
+.animationText{
+    transition: opacity 500ms;
+    text-align: center;
+    margin: 7px auto 15px auto;
+}
+.animationText[data-scroll="out"] {
+    opacity: 0;
+}
+
+.animationText[data-scroll="in"] {
+    opacity: 1;
+    
+}
+.black{
+    background-color: #0d0d0d;
+    color: white;
+}
+
+@media (min-width: 880px){
+    .me__items2{
+        display: flex;
+        flex-direction: column;
+    }
+    .progr,
+    .student,
+    .free,
+    .seo,
+    .objective{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .student ,
+    .seo{
+       flex-direction: row-reverse;
+    }
+    /*Efectos de animaciones*/
+    .animationTitle[data-scroll="out"] {
+        opacity: none;
+        transform: none;
+    }
+    
+    .animationTitle[data-scroll="in"] {
+        opacity: none;
+        transform: none;
+    }
+    .animationText[data-scroll="out"] {
+        opacity: none;
+       
+    }
+    .animationText[data-scroll="in"] {
+        opacity: none;
+        
+    }
+    .animationLeft {
+        transition: opacity 1s, transform 
+       1s;
+    }
+    .animationLeft[data-scroll="out"] {
+        opacity: 0;
+        transform: translateX(-600%) scale(0.4);
+    }
+    
+    .animationLeft[data-scroll="in"] {
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+    .animationRight {
+        transition: opacity 1s, transform 
+       1s;
+    }
+    .animationRight[data-scroll="out"] {
+        opacity: 0;
+        transform: translateX(600%) scale(0.4);
+    }
+    
+    .animationRight[data-scroll="in"] {
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+    .animationText{
+        width: 50%;
+    }
+
+}

@@ -1,0 +1,121 @@
+.parallax {
+    margin-top: 50px;
+    height: 200px;
+    width: 100%;
+    background: url("/images/plantsBar.jpg");
+    background-attachment: inherit;
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    padding-top: 195px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  .spanproyect:nth-child(odd) {
+    transform: skewY(15deg);
+  }
+  
+  .spanproyect:nth-child(even) {
+    transform: skewY(-15deg);
+    background-color: #ffffff;
+    box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spanproyect {
+    display: block;
+    background-color: #ffffff;
+    color: #0d0d0d;
+    font-weight: 900;
+    width: 120px;
+    height: 50px;
+    line-height: 55px;
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
+  }
+  
+  /*Proyectos TIPS*/
+  .proyectos {
+    background-color: white;
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  .card {
+    transition: opacity 5s, transform 5s;
+    text-align: center;
+    width: 95%;
+    padding: 30px;
+    background: #0d0d0d;
+    margin: 50px auto;
+    transition: 0.3s ease;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    color: #eca54d;
+    box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3),
+      inset 0 -1px 0 0 rgb(68, 68, 68);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+  
+  .entry-title small {
+    margin-top: 20px;
+    font-family: raleway, arial, sans-serif;
+  
+    text-transform: uppercase;
+  }
+  
+  .entry-title a {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cardspan {
+    display: block;
+    margin-top: 10px;
+    font-family: raleway, arial, sans-serif;
+    font-weight: 700;
+    color: #16a085;
+  }
+  
+  .cardspan a {
+    color: white;
+  }
+
+
+@media (min-width: 880px){
+    .card {
+        height: 200px;
+        margin-top: 50px;
+        width: 30%;
+      }
+    
+      .card[data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-600%) scale(0.4);
+      }
+    
+      .card[data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+      }
+    
+      .proyectos {
+        padding: 0px;
+        display: flex;
+        height: 260px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+      .spanproyect{
+          height: 80px;
+          line-height: 85px;
+          width: 90px;
+      }
+}
