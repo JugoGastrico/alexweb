@@ -12,6 +12,7 @@ body {
   font-family: "Poppins", "Open Sans", sans-serif;
   min-height: -webkit-fill-available;
   overflow-x: hidden;
+  background-color: #0d0d0d;
 
 }
 body::-webkit-scrollbar {
@@ -41,4 +42,24 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   margin-right: 0px;
   z-index: 1000000;
+}
+
+.footerStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo__footer{
+  margin: 20px;
+}
+.copy{
+  font-size: 13px;
+
+  color: white;
+}
+.copy a{
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
 }

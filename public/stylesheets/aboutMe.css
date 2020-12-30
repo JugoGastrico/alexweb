@@ -1,4 +1,8 @@
-.me__titulo{
+.me {
+    background-color: rgb(12, 12, 12);
+}
+
+.me__titulo {
     padding-bottom: 10px;
     font-family: 'Proza Libre', sans-serif;
     letter-spacing: 2px;
@@ -7,27 +11,70 @@
     margin: 25px auto 20px 0;
     border-bottom: 2px solid rgba(255, 166, 0, 0.363);
 }
-.me_items{
-    display: flex;
-    flex-direction: column;
+
+.me__text h1 {
+    padding-top: 35px;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    color: orange;
+    text-align: center;
 }
+
+.circle {
+    height: 300px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.me__text p {
+    line-height: 28px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    letter-spacing: 1.2px;
+}
+
+.me__img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .progr,
 .student,
 .free,
 .seo,
-.objective{
+.objective {
     padding: 20px;
 }
 
+.progr {
+    padding-top: 80px;
+    border-top: 2px solid orange;
+    margin-top: 55px;
+}
+
+.objective {
+    padding-bottom: 100px;
+}
+
 .animationTitle {
-    transition: opacity 1s, transform 
-    500ms;
+    transition: opacity 1s, transform 500ms;
     text-align: center;
     margin: 0 auto;
     font-size: 20px;
     font-family: 'Proza Libre', sans-serif;
     color: orange;
+    letter-spacing: 2.4px;
 }
+
 .animationTitle[data-scroll="out"] {
     opacity: 0;
     transform: translateX(-600%) scale(0.4);
@@ -38,93 +85,153 @@
     transform: translateX(0%) scale(1);
 }
 
-.animationTitle:focus{
+.animationTitle:focus {}
 
-}
-
-.animationText{
+.animationText {
+    color: white;
     transition: opacity 500ms;
     text-align: center;
     margin: 7px auto 15px auto;
+    letter-spacing: 1.3px;
 }
+
 .animationText[data-scroll="out"] {
     opacity: 0;
 }
 
 .animationText[data-scroll="in"] {
     opacity: 1;
-    
+
 }
-.black{
-    background-color: #0d0d0d;
+
+.black {
     color: white;
 }
 
-@media (min-width: 880px){
-    .me__items2{
+@media (min-width: 880px) {
+    .me {
+        background-color: #0d0d0dfd;
+    }
+
+    .me__items2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .me__text {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .me__text h1 {
+        margin-top: 60px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .me__img {
+        padding-top: 60px;
+    }
+
+    .me__text p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .items {
         display: flex;
         flex-direction: column;
     }
+
     .progr,
     .student,
     .free,
     .seo,
-    .objective{
+    .objective {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
     }
-    
-    .student ,
-    .seo{
-       flex-direction: row-reverse;
+
+    .progr,
+    .free,
+    .objective {
+        background-color: white;
+        color: #0d0d0d;
     }
+    .progr {
+        border-top: none;
+        padding-top: 20px;
+    }
+    .objective{
+        padding-bottom: 20px;
+    }
+
+    .student,
+    .seo {
+        flex-direction: row-reverse;
+    }
+
+    .blackText {
+        color: #0d0d0d;
+    }
+
     /*Efectos de animaciones*/
     .animationTitle[data-scroll="out"] {
         opacity: none;
         transform: none;
     }
-    
+
     .animationTitle[data-scroll="in"] {
         opacity: none;
         transform: none;
     }
+
     .animationText[data-scroll="out"] {
         opacity: none;
-       
+
     }
+
     .animationText[data-scroll="in"] {
         opacity: none;
-        
+
     }
+
     .animationLeft {
-        transition: opacity 1s, transform 
-       1s;
+        transition: opacity 1s, transform 1s;
     }
+
     .animationLeft[data-scroll="out"] {
         opacity: 0;
         transform: translateX(-600%) scale(0.4);
     }
-    
+
     .animationLeft[data-scroll="in"] {
         opacity: 1;
         transform: translateX(0%) scale(1);
     }
+
     .animationRight {
-        transition: opacity 1s, transform 
-       1s;
+        transition: opacity 1s, transform 1s;
     }
+
     .animationRight[data-scroll="out"] {
         opacity: 0;
         transform: translateX(600%) scale(0.4);
     }
-    
+
     .animationRight[data-scroll="in"] {
         opacity: 1;
         transform: translateX(0%) scale(1);
     }
-    .animationText{
+
+    .animationText {
         width: 50%;
     }
+
 
 }

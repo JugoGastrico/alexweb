@@ -29,9 +29,10 @@
     
 }
 .btnContact a{
+    color: white;
     text-decoration: none;
-    color: black;
-    background-color: white ;
+    letter-spacing: 2.5px;
+    background-color: orange ;
     border-radius: 15px;
     padding: 12px;
 }
@@ -42,10 +43,10 @@
 @media (min-width: 1200px) {
     .home {
         background: url("/images/plants.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         flex-direction: row;
         justify-content: space-between;
     }

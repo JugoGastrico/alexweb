@@ -1,12 +1,13 @@
 .parallax {
-    margin-top: 50px;
+    margin-top: 0px;
     height: 200px;
     width: 100%;
-    background: url("/images/plantsBar.jpg");
+    background: url("/images/orange.jpg");
     background-attachment: inherit;
     background-position: initial;
     background-repeat: no-repeat;
     background-size: cover;
+   
 }
 
 .text {
@@ -15,19 +16,19 @@
     padding-top: 195px;
     transform: translateY(-50%);
     text-align: center;
-  }
-  
-  .spanproyect:nth-child(odd) {
+}
+
+.spanproyect:nth-child(odd) {
     transform: skewY(15deg);
-  }
-  
-  .spanproyect:nth-child(even) {
+}
+
+.spanproyect:nth-child(even) {
     transform: skewY(-15deg);
     background-color: #ffffff;
     box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .spanproyect {
+}
+
+.spanproyect {
     display: block;
     background-color: #ffffff;
     color: #0d0d0d;
@@ -36,16 +37,18 @@
     height: 50px;
     line-height: 55px;
     box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
-  }
-  
-  /*Proyectos TIPS*/
-  .proyectos {
+}
+
+/*Proyectos TIPS*/
+.proyectos {
     background-color: white;
     width: 100%;
-    margin-top: 0px;
-  }
-  
-  .card {
+    padding: 20px 0;
+}
+
+.card {
+    padding-top: 50px;
+    background-color: white;
     transition: opacity 5s, transform 5s;
     text-align: center;
     width: 95%;
@@ -54,68 +57,79 @@
     margin: 50px auto;
     transition: 0.3s ease;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    color: #eca54d;
+    color: orange;
     box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3),
-      inset 0 -1px 0 0 rgb(68, 68, 68);
-  }
-  
-  .card:hover {
+        inset 0 -1px 0 0 rgb(68, 68, 68);
+}
+
+.card:hover {
     transform: translateY(-10px) scale(1.02);
-  }
-  
-  .entry-title small {
+}
+
+.entry-title small {
     margin-top: 20px;
     font-family: raleway, arial, sans-serif;
-  
+
     text-transform: uppercase;
-  }
-  
-  .entry-title a {
+}
+
+.entry-title a {
     font-weight: 700;
     color: white;
     text-decoration: none;
-  }
-  
-  .cardspan {
+}
+
+.cardspan {
     display: block;
     margin-top: 10px;
     font-family: raleway, arial, sans-serif;
     font-weight: 700;
     color: #16a085;
-  }
-  
-  .cardspan a {
+}
+
+.cardspan a {
     color: white;
-  }
+}
 
-
-@media (min-width: 880px){
+@media (min-width: 580px){
+    .card{
+        width: 55%;
+    }
+}
+@media (min-width: 880px) {
     .card {
         height: 200px;
-        margin-top: 50px;
         width: 30%;
-      }
-    
-      .card[data-scroll="out"] {
+    }
+
+    .card[data-scroll="out"] {
         opacity: 0;
         transform: translateY(-600%) scale(0.4);
-      }
-    
-      .card[data-scroll="in"] {
+    }
+
+    .card[data-scroll="in"] {
         opacity: 1;
         transform: translateY(0%) scale(1);
-      }
-    
-      .proyectos {
+    }
+
+    .proyectos {
         padding: 0px;
         display: flex;
         height: 260px;
         margin-top: 40px;
         margin-bottom: 60px;
-      }
-      .spanproyect{
-          height: 80px;
-          line-height: 85px;
-          width: 90px;
-      }
+    }
+
+    .spanproyect {
+        height: 80px;
+        line-height: 85px;
+        width: 90px;
+    }
+
+    .parallax {
+        margin-top: -50px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
 }
