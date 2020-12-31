@@ -37,7 +37,7 @@
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
 }
 
 .me__img {
@@ -85,14 +85,12 @@
     transform: translateX(0%) scale(1);
 }
 
-.animationTitle:focus {}
-
 .animationText {
     color: white;
     transition: opacity 500ms;
     text-align: center;
     margin: 7px auto 15px auto;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.4px;
 }
 
 .animationText[data-scroll="out"] {

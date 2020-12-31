@@ -1,0 +1,72 @@
+.menuProgra{
+    padding-top: 80px;
+    margin: 0 0 35px 15px;
+    line-height: 30px;
+}
+.menuProgra a{
+    text-decoration: none;
+}
+.container{
+    margin: 0 10px;
+}
+.container img{
+    
+}
+.container h1 {
+    text-align: center;
+    margin: 0 auto;
+    color: orange;
+    letter-spacing: 5px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.container h4 {
+    margin-bottom: 5px;
+    color: grey;
+    letter-spacing: 2px;
+}
+.container p{
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+}
+.container a{
+    max-width: 100%;
+    color: orange;
+}
+.container textarea{
+    margin: 0;
+    padding: 0;
+    color: orange;
+    font-size: 16px;
+}
+.img1{
+    width: 50%;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+.html{
+    width: 100%;
+    margin: 10px auto 40px auto;
+}
+.visualStudioBody p{
+    color: orange;
+    margin-bottom: 0px;
+}
+.sangria{
+    margin-left: 35px;
+}
+.enlaces {
+    margin-bottom: 20px;
+}
+.enlaces p{
+    margin-bottom: 0;
+}
+
+.botonesImgFixed{
+    margin: 0;
+    padding: 0;
+}
+.botonesImgFixed img{
+    width: 65px;
+    height: 65px;
+}

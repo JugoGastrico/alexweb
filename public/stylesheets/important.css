@@ -13,7 +13,6 @@
   letter-spacing: 4px;
   font-size: 26px;
   text-align: center;
-  transition: opacity 500ms, transform 500ms;
   color: orange;
   border-bottom: 2px solid orange;
   border-top: 2px solid orange;
@@ -91,8 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation-name: scalex;
-  animation-name: scalex;
 }
 
 .important p {
@@ -114,27 +111,35 @@
 @media (min-width: 880px) {
   .important {
     display: flex;
- 
-    margin: 0 0 80px 0;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 80px auto;
+    width: 80%;
   }
 
   .important__tituloMain {
     color: whitesmoke;
     margin-top: 100px;
+    margin-bottom: -40px;
     padding-bottom: 100px;
     font-size: 30px;
     border: none;
+
+  }
+  .important__titulos {
+    width: 80%;
   }
   .important__texto {
     display: flex;
     color: white;
     font-size: 700;
+    width: 80%;
+    text-align: center;
   }
 
   .columns {
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
   }
@@ -145,41 +150,21 @@
   .secc3,
   .secc4 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 200px;
-    margin-bottom: 25px;
+    height: 300px;
+    margin-bottom: 30px;
     border: 2px solid orange;
+    border-radius: 35%;
+ 
   }
 
-  .secc1:hover {
-    
-    color: orange;
-
-    background-color: white;
-    transform: scale(1.04);
-  }
-
-  .secc2:hover {
-    color: orange;
-    background-color: white;
-    transform: scale(1.04);
-  }
-
-  .secc3:hover {
-    color: white;
-    background-color: white;
-    transform: scale(1.04);
-  }
-
+  .secc1:hover,
+  .secc2:hover,
+  .secc3:hover,
   .secc4:hover {
-    color: white;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.041);
     transform: scale(1.04);
-  }
-
-  .important__tituloMain {
-    margin-bottom: -40px;
   }
 }
 
@@ -189,7 +174,7 @@
   }
 
   .columns {
-    width: 65%;
+    width: 75%;
   }
 }
 

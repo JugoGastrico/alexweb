@@ -7,7 +7,6 @@
     background-position: initial;
     background-repeat: no-repeat;
     background-size: cover;
-   
 }
 
 .text {
@@ -69,7 +68,6 @@
 .entry-title small {
     margin-top: 20px;
     font-family: raleway, arial, sans-serif;
-
     text-transform: uppercase;
 }
 
@@ -91,15 +89,20 @@
     color: white;
 }
 
-@media (min-width: 580px){
-    .card{
+@media (min-width: 580px) {
+    .card {
         width: 55%;
     }
 }
+
 @media (min-width: 880px) {
     .card {
-        height: 200px;
+        height: 250px;
         width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .card[data-scroll="out"] {
@@ -112,12 +115,17 @@
         transform: translateY(0%) scale(1);
     }
 
+    .entry-title {
+        padding:15px;
+    }
+    .card small {
+        margin-top: 10px;
+    }
+
     .proyectos {
-        padding: 0px;
         display: flex;
-        height: 260px;
-        margin-top: 40px;
-        margin-bottom: 60px;
+        justify-content: center;
+        align-items: center;
     }
 
     .spanproyect {
@@ -126,8 +134,12 @@
         width: 90px;
     }
 
+    .text{
+        padding-top: 225px;
+    }
     .parallax {
-        margin-top: -50px;
+        height: 240px;
+        margin-top: 0px;
         background-attachment: fixed;
         background-size: cover;
         background-position: center;

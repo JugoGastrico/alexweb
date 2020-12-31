@@ -4,9 +4,9 @@
   </head>
   <body class="body-progr">
     <%- include('includes/header') %>
-
     <div class="container">
-      <div class="menuProgra">
+      <div class="menuProgra" id="submenu">
+        <h4>Nav Menu:</h4>
         <ul>
           <li><a href="#init">Prepara tu Visual Studio</a></li>
           <li><a href="#webpack">Webpack</a></li>
@@ -22,13 +22,15 @@
         <p>Esta sección tiene la funcionalidad de compartir los conocimientos adquiridos en programación.
           De esta manera, la página también funcionará como una herramienta informativa para cualquier lector.
         </p>
+        <p>Nota: al final de cada sección, puedo compartir enlaces de videos o bien de los documentos originales para que puedas obtener más información.</p>
         <h1 class="initVS__titulo marginFixed" id="init">
           Prepara tu Visual Studio
         </h1>
         <h4>Antes de empezar</h4>
+        <p>En esta primera etapa, veremos cómo configurar correctamente tu visual studio para arrancar a programar de manera adecuada.</p>
         <p>
-          Para arrancar nuestro proyecto correctamente, debemos tener instalada
-          en nuestra terminal <a>npm</a>. Para ello, puedes ingresar a este enlace que
+          Inicialmente, debemos tener instalado
+          en nuestra terminal, <a>npm</a>. Para ello, puedes ingresar a este enlace que
           te explicará cómo instalarlo según tu sistema operativo:
           <a href="https://www.npmjs.com/get-npm"
             >https://www.npmjs.com/get-npm</a
@@ -52,21 +54,19 @@
         <p>
           Para arrancar, vamos a abrir nuestro Visual Studio Code y vamos a
           crear una carpeta que se llame <a>app</a> donde guardaremos la mayoría de nuestros
-          proyectos. Haremos clic derecho a esta carpeta, y buscaremos la opción para crear una nueva carpeta, "New folder". A esta carpeta la llamaremos <a>assets</a>.
-          Dentro de esta carpeta, creamos 3 más. Una que se llamará
+          proyectos. Haremos clic derecho a esta carpeta, y buscaremos la opción para crear una nueva carpeta, "New folder" y la llamaremos <a>assets</a>.
+          Adentro de esta carpeta, creamos 3 más. Una que se llamará
           <a>images</a> donde guardaremos todas las imagenes de nuestro
-          proyecto. Otra que se llame <a>scripts</a>, donde estarán todos
-          nuestros archivos .js (javascript). Y la tercera será <a>styles</a>,
-          allí estarán todos nuestros archivos .css .scss (estilos).
+          proyecto, otra que se llamará <a>scripts</a> donde estarán todos
+          nuestros archivos .js (javascript) y la tercera será <a>styles</a>,
+          allí estarán todos nuestros archivos .css & .scss (estilos).
           <p><u>Nota:</u> los nombres de las carpetas puedes elegirlos según tus gustos. Únicamente te recomiendo que ingresemos los mismos para siempre estar bien alineados. Quedaría así:</p>
-          
           <img class="img1" src="./images/Programacion-section/Webpacks/folders.png" />
         </p>
         <h4>Step 2</h4>
         <p>
           Dentro de la carpeta app, crearemos un archivo <a>index.html</a> (para crear una archivo, simplemente haz clic derecho en la carpeta y New file), dentro de
-          este archivo escribiremos "html" (sin comillas), y nos aparecerá la opción html:5,
-          la seleccionamos. Aquí es donde escribirás tu código HTML. </p>
+          este archivo (en el campo para comenzar a programar) escribiremos "html" (sin comillas), y nos aparecerá la opción html:5, la seleccionamos. Esto generará un template automático de Html y bastanta bueno para comenzar a programar.</p>
           <img class="html" src="./images/Programacion-section/Webpacks/html.png">
           <p>Dentro de la carpeta styles, crearemos un archivo que se llame <a>style.css</a>. Este
           va a ser tu archivo donde van a estar todas las declaraciones de tus
@@ -82,6 +82,7 @@
           puedes teclear ctrl + shift + ñ. Una vez allí, comenzaremos a instalar
           nuestra carpeta de packages. Para ello, ingresa el siguiente comando:
   <a>npm init -y</a>.
+         
         </p>
 
         <p>
@@ -91,16 +92,59 @@
         </p>
 
         <p>Hasta ahora creamos todas las carpetas con los archivos donde realizarás el proyecto. Queda únicamente instalar los paquetes que utilizaremos.</p>
+        <a href="https://code.visualstudio.com/docs/editor/integrated-terminal">Terminal - Visual Studio doc </a>
+      
 
         <h1 id="webpack">Webpack</h1>
+        <h4>Step1</h4>
         <p>
-          A continuación vamos a instalar <a href="https://webpack.js.org/">Webpack. </a>
+          A continuación vamos a instalar <a href="https://webpack.js.org/">Webpack.</a>
           Webpack es una herramienta la cual nos va a permitir empaquetar y exportar todos los ficheros necesarios para que el proyecto funcione con todas las dependencias frontend.</p>
         <p>Para instalarlo, simplemente ingresaremos a nuestra terminal y pondremos <a>npm install webpack webpac-cli --save-dev.</a> (Importante copiarlo tal cual).
 
         </p>
         <p>Si ingresamos a nuestro archivo package.json, veremos que en las dependecias ahora aparecen estos 2 nuevos paquetes instalados.</p>
-          
+        <p>Lo siguiente es crear un archivo.js en el exterior de nuestras carpetas que hemos creado, es decir, no dentro de ninguna de ellas y lo llamaremos: <a>webpack.config.js</a> (importante que se llame igual).
+        </p>
+        <p>Dentro de este archivo copiaremos el siguiente código:</p>
+        <div class="visualStudioBody">
+          <p>module.exports = {</p>
+            <p class="sangria">entry: './app/assets/scripts/App.js'</p>
+          <p>}</p>
+        </div>
+        <p>Con esto le estamos diciendo a Webpack que el archivo de entrada es el file .js que se encuentra en las carpetas configuradas.</p>
+        <p>Luego iremos al archivo <a>package.json</a> y dentro del mismo, debajo de Scripts, copiaremos el siguiente comando:</p>
+        <div class="visualStudioBody">
+          <p>"div": "webpack",</p>
+          <p>"test": "echo \"Error: no test specified\" && exit 1"
+          </p>
+        </div>
+        <p>Con esto le estamos informando a nuestra terminal que al ejectuar el comando <a>npm run dev</a> se ejectue la aplicación.</p>
+        <p>Lo siguiente será en la terminal ingresar <a>npm run dev</a>. Esto me creará un nuevo file que se llamará dist. Este file es un archivo .js, en el cual se almacenará las ediciones que se vayan realizando.</p>
+        <p>Ahora lo que vamos a hacer es cambiarle el nombre a ese archivo a <a>App.js</a> y agregar la configuración correspondiente de webpack. Para ello, copiaremos la siguiente información en mi archivo <a>webpack.config.js</a>:</p>
+        <div class="visualStudioBody">
+          <p>const path = require('path')</p>
+          <p>module.exports = {</p>
+          <p class="sangria"> entry: './app/assets/scripts/App.js', </p>
+          <p class="sangria"> output: {</p>
+            <p class="sangria">filename: 'bundled.js', </p>
+            <p class="sangria">path: path.resolve(__dirname, 'app')</p>
+            <p class="sangria">  },</p>
+            <p class="sangria">mode: 'development',</p>
+            <p class="sangria">	watch:true
+            </p>
+            <p>}</p>
+        </div>
+        <p>Finalmente, lo que vamos a realizar es ingresar a nuestro archivo <a>index.html</a> y debajo de todo, antes del cierre de el tag /body, copiaremos el siguiente script: </p>
+        <p class="sangria"><a><textarea><script src="bundled.js"></script></textarea></a></p>
+      
+        <div class="enlaces">
+          <h4>Enlaces de ayuda</h4>
+          <p>Webpack / concepts, entry, output, loaders & plugins:</p>
+            <li><a href="https://webpack.js.org/concepts/">https://webpack.js.org/concepts/</a></li>
+        </div>
+        <h4>Step 2</h4>
+        
           If you've been following the guides from the start, you will now have
           a small project that shows "Hello webpack". Now let's try to
           incorporate some other assets, like images, to see how they can be
@@ -180,7 +224,9 @@
         </p>
       </div>
     </div>
-    <div class="arrowTop">asdasd</div>
+    <div class="botones botonesImgFixed">
+      <a href="#submenu"><img src="/images/arrow-top.png"></a>
+    </div>
     <script src="./javascripts/navbar.js"></script>
 
   </body>
